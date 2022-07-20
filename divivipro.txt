@@ -1,0 +1,15 @@
+public class Projectproduct{
+static webDriver driver;
+public projectproduct(WebDriver driver){
+this.driver=driver;
+}
+static By data=By.id("twotabsearchtextbox");
+static By search=By.id("nav-search-submit-button");
+static string URL="http:/www.amazon.in/";
+
+public void Search(){
+driver.get(URL);
+Thread.sleep(2000);
+driver.findElement(data).sendKeys("iphone");
+JavaScript js=(JavascriptExecutor)driver;
+js.executeScript("scroll(0,800);
